@@ -1,0 +1,75 @@
+
+- crea el archivo package.json con la configuración del proyecto y su estructura
+npm init --yes
+
+- instalamos el framework express y el modulo morgan 
+express -> framework backend de javascript
+morgan  -> modulo para ver por consola las peticiones que van llegando
+
+npm i express morgan 
+npm i mysql
+
+- creamos la carpeta src donde va el código fuente
+mkdir src
+
+- corremos la aplicación
+node src/index.js
+
+middlware -> función que procesa datos antes de que el servidor los reciba
+
+- instalamos un modulo llamado "nodemon" para que reinicie el servidor cuando quiera
+npm i nodemon -D
+
+- en scripts -> package.json creamos el comando dev
+"dev": "nodemon src/index.js"
+
+- corremos el proyecto
+npm run dev
+
+- organizamos mejor las rutas en un archivo diferente, para que sea mas entendible
+routes/movies.js
+routes/users.js
+
+- simulamos una DB con un archivo .json
+
+- express validators -> compueba que se reciben los datos correctamente
+
+- creamos en un nuevo archivo las rutas GET, POST, PUT, DELETE, las cuales trabajan 
+con objetos json
+
+-> para petición POST modificamos en postman las headers y el body
+HEADERS
+key:   Content-Type
+Value: application/json
+
+BODY
+{
+    "title": "Shrek",
+    "director": "Cameron Diaz",
+    "year": 2006,
+    "rating": 9.5 
+}
+
+-> para petición PUT y DELETE necesitamos pasarle el id como parametro
+router.delete('/:id', (req, res) =>{});
+router.put('/:id', (req, res) =>{});
+
+-> para poder eliminar un objeto json instalamos la libreria underscore
+npm i underscore
+
+- libreria underscore -> sirve para iterar listar y arrays
+
+-> consultamos una API rest externa desde nuestro servidor con un módulo llamado
+node-fetch
+
+-> jsonplaceholder: ejemplos de API rest y como consultarlas
+router.get('/', async (req, res) =>{
+    await fetch('https://jsonplaceholder.typicode.com/users');
+    res.send('Users');
+});
+
+- uso de parámetros en la URL
+router.get('/:numeroInicial/:numeroFinal', (req, res) =>{
+	 const min = parseInt(req.params.numeroInicial);
+	 const max = parseInt(req.params.numeroFinal);
+});

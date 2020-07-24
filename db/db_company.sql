@@ -1,0 +1,24 @@
+
+
+CREATE DATABASE IF NOT EXISTS company;
+
+USE company;
+
+CREATE TABLE employees(
+	ID INT(11) NOT NULL AUTO_INCREMENT,
+  	NAME VARCHAR(45) DEFAULT NULL,
+  	SALARY INT(11) DEFAULT NULL,
+  	PRIMARY KEY(ID)
+);
+
+DESCRIBE employees;
+
+DROP TABLE employees;
+
+INSERT INTO employees VALUES
+	(1, "MANUEL HERRERA", 8000),
+    (2, "LUCIA GOMEZ", 9600),
+    (3, "JOHN CARTER", 7900);
+    
+SELECT *FROM employees;
+
