@@ -73,3 +73,5 @@ router.get('/:numeroInicial/:numeroFinal', (req, res) =>{
 	 const min = parseInt(req.params.numeroInicial);
 	 const max = parseInt(req.params.numeroFinal);
 });
+
+- USAMOS UN PROCEDIMIENTO ALMACENADO PARA INSERTAR(POST) Y ACTUALIZAR(PUT) DATOS EN LA DB.
