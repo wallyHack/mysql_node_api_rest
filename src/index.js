@@ -7,7 +7,7 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 app.set("json spaces", 2);
 
-// middlegares
+// middlewares
 app.use(morgan('dev'));
 app.use(express.json()); //el server puede usar formatos json
 app.use(express.urlencoded({extended: false}));

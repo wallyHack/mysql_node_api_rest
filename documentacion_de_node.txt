@@ -4,7 +4,7 @@ npm init --yes
 
 - instalamos el framework express y el modulo morgan 
 express -> framework backend de javascript
-morgan  -> modulo para ver por consola las peticiones que van llegando
+morgan  -> modulo para ver por consola las peticiones que van llegando del servidor
 
 npm i express morgan 
 npm i mysql
@@ -57,7 +57,7 @@ router.put('/:id', (req, res) =>{});
 -> para poder eliminar un objeto json instalamos la libreria underscore
 npm i underscore
 
-- libreria underscore -> sirve para iterar listar y arrays
+- libreria underscore -> sirve para iterar listas y arrays
 
 -> consultamos una API rest externa desde nuestro servidor con un módulo llamado
 node-fetch
